@@ -17,11 +17,11 @@
 
 <body>
     <header>
-        <div class="join-notification">
+        <a href="#" class="join-notification  containerize">
             <img src="./assets/img/Icon.png" alt="Join">
-            <p>Join Our Personalized Nutrition Demo For Free</p>
+            <div>Join Our Personalized Nutrition Demo For Free</div>
             <i class="fa-solid fa-arrow-right"></i>
-        </div>
+        </a>
         <nav>
             <img src="./assets/img/Logo.png" alt="Logo">
 
@@ -36,7 +36,7 @@
             <button class="contact-Btn">Contact Us</button>
         </nav>
 
-        <div class="hero">
+        <div class="hero containerize">
             <div class="left-image">
                 <img src="./assets/img/header.png" alt="Fit Person">
             </div>
@@ -82,7 +82,7 @@
             </div>
 
             <div class="FeatureItem">
-                <img src="./assets/img/Icon Container (2).png.png" alt="Hat Icon">
+                <img src="./assets/img/Icon Container (2).png" alt="Hat Icon">
                 <h2>Guidance from Certified Nutritionists</h2>
                 <h3>
                     Our team of experienced and certified nutritionists will provide professional guidance and support
@@ -159,6 +159,78 @@
                         </a>
                     </div>
                 </div>
+
+
+                <div class="blogEntry">
+                    <img src="./assets/img/Image (2).png" alt="Milk">
+                    <p>Mindful Eating</p>
+                    <h2>Cultivating a Healthy Relationship with Food
+                    </h2>
+                    <h3>
+                        Learn how practicing mindful eating can help you develop a healthier relationship with food and
+                        improve your overall well-being.
+                    </h3>
+                    <div class="card-footer">
+                        <img src="./assets/img/Image (9).png" alt="Profil 1">
+                        <div class="meta-data">
+                            <p>Sarah Thompson</p>
+                            <h3>23 May 2023 - 5 min read</h3>
+                        </div>
+                        <a href="#" class="blog-action">
+                            <i class="fa-regular fa-heart"></i>
+                        </a>
+                        <a href="#" class="blog-action">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="blogEntry">
+                    <img src="./assets/img/Image.png" alt="Milk">
+                    <p>Understanding Macronutrients</p>
+                    <h2>Carbohydrates, Proteins, and Fats</h2>
+                    <h3>
+                        Get a comprehensive understanding of macronutrients and their role in your diet for optimal
+                        health and weight management.
+                    </h3>
+                    <div class="card-footer">
+                        <img src="./assets/img/Image (10).png" alt="Profil 1">
+                        <div class="meta-data">
+                            <p>Mark Wilson</p>
+                            <h3>23 May 2023 - 5 min read</h3>
+                        </div>
+                        <a href="#" class="blog-action">
+                            <i class="fa-regular fa-heart"></i>
+                        </a>
+                        <a href="#" class="blog-action">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="blogEntry">
+                    <img src="./assets/img/Image (1).png" alt="Milk">
+                    <p>Healthy Snacks on the Go</p>
+                    <h2>Quick and Nutritious Options</h2>
+                    <h3>
+                        Explore a variety of convenient and healthy snack ideas to keep you fueled throughout the day.
+                    </h3>
+                    <div class="card-footer">
+                        <img src="./assets/img/Image (11).png" alt="Profil 1">
+                        <div class="meta-data">
+                            <p>Emily Johnson</p>
+                            <h3>23 May 2023 - 5 min read</h3>
+                        </div>
+                        <a href="#" class="blog-action">
+                            <i class="fa-regular fa-heart"></i>
+                        </a>
+                        <a href="#" class="blog-action">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -169,41 +241,50 @@
                 height and activity level. Enter this information to calculate your individual requirements.
             </h3>
 
-            <form>
+            <form id="form" onsubmit="calcMetabolicRate(event)">
                 <label for="body_size">Body size (in cm)
-                    <input type="number" id="body_size" name="body_size">
+                    <input type="number" id="body_size" name="body_size" required>
                     </input>
                 </label>
 
 
                 <label for="age">Age
-                    <input type="number" id="age" name="age">
+                    <input type="number" id="age" name="age" required>
                     </input>
                 </label>
 
                 <label for="weight">Weight
-                    <input type="number" id="weight" name="weight">
+                    <input type="number" id="weight" name="weight" required>
                     </input>
                 </label>
 
                 <label for="activity">Activity
-                    <input type="number" id="activity" name="activity"
-                        placeholder="Exclusively sedentary work with little or no physical activity in leisure time...">
-                    </input>
+                    <select name="activity" id="activity">
+                        <option value="0.95">Schlafen</option>
+                        <option value="1.2">Nur Sitzen oder Liegen</option>
+                        <option value="1.5" slected default> Ausschließlich sitzende Tätigkeit mit wenig oder keiner
+                            körperlichen
+                            Aktivität in der Freizeit, z.B. Büroarbeit</option>
+                        <option value="1.7">Sitzende Tätigkeit mit zeitweilig gehender oder stehender Tätigkeit, z.B.
+                            Studierende, Fließbandarbeitende, Laborfachkräfte, Berufskraftfahrende</option>
+                        <option value="1.9" default>Überwiegend gehende oder stehende Tätigkeit, z.B. Verkäufer:innen,
+                            Kellner:innen, Handwerker:innen, Mechaniker:innen</option>
+                        <option value="2.2" default>Körperlich anstrengende berufliche Arbeit</option>
+                    </select>
+
                 </label>
 
                 <h3>Gender</h3>
-
-                <input type="radio" id="female" name="gender" value="Female">
-                <label for="female">Female</label><br>
-                <input type="radio" id="male" name="gender" value="Male">
-                <label for="male">Male</label>
-
-
-                <button class="calcCaloriesBtn">Calculate</button>
+                <div class="gender-select">
+                    <input type="radio" id="female" name="gender" value="Female" checked>
+                    <label for="female">Female</label><br>
+                    <input type="radio" id="male" name="gender" value="Male">
+                    <label for="male">Male</label>
+                </div>
+                <input class="calcCaloriesBtn" type="submit" name="submit" value="Calculate" />
             </form>
 
-            <table>
+            <table id="mbrTable" style="display:none;">
                 <thead>
                     <th></th>
                     <th>kcal</th>
@@ -211,21 +292,21 @@
                 </thead>
                 <tr>
                     <td>Basal Metabolic Rate</td>
-                    <td>
+                    <td id="mbr">
                         ---
                     </td>
-                    <td></td>
-                    ---
+                    <td id="mbr-kj">
+                        ---
                     </td>
                 </tr>
 
                 <tr>
                     <td>Total Daily Energy Expenditure</td>
-                    <td>
+                    <td id="tdee">
                         ---
                     </td>
-                    <td></td>
-                    ---
+                    <td id="tdee-kj">
+                        ---
                     </td>
                 </tr>
             </table>
@@ -275,7 +356,8 @@
                     </h3>
 
                     <h3>
-                        Upgrade to our Premium Plan for enhanced features. In addition to the Basic Plan, you'll receive video consultations, priority support, and personalized recipe recommendations.
+                        Upgrade to our Premium Plan for enhanced features. In addition to the Basic Plan, you'll receive
+                        video consultations, priority support, and personalized recipe recommendations.
                     </h3>
 
                     <div class="price-plan-2">
@@ -296,7 +378,8 @@
                     </h3>
 
                     <h3>
-                        Experience the full benefits of personalized nutrition coaching with our Ultimate Plan. Enjoy all the features of the Premium Plan, along with 24/7 chat support and exclusive workshops.
+                        Experience the full benefits of personalized nutrition coaching with our Ultimate Plan. Enjoy
+                        all the features of the Premium Plan, along with 24/7 chat support and exclusive workshops.
                     </h3>
 
                     <div class="price-plan-3">
@@ -314,7 +397,7 @@
     </main>
 
     <footer>
-        <nav>
+        <nav class="containerize">
             <img src="./assets/img/Logo.png" alt="Logo">
 
             <ul>

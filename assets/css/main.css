@@ -23,32 +23,71 @@ body {
     font-weight: 600;
     font-style: normal;
     color: black;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
 }
 
 header {
     background-color: var(--primary-color-darkgreen-shade-15);
-    color:var(--white);
+    color: var(--white);
+    padding-top: 10px;
 }
 
-footer{
+footer {
     background-color: var(--primary-color-darkgreen-shade-15);
-    color:var(--white);
+    color: var(--white);
 }
 
-.footer-links{
+.footer-links {
     font-size: 18px;
     font-weight: 500;
 }
 
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.containerize {
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
 .join-notification {
-    border-radius: 5px;
+    height: 48px;
+    border-radius: 10px;
     background-color: var(--primary-color-darkgreen-shade-30);
-    background-image: url('../img/Abstract\ Design.png');
+
+    /* */
+    background-image: url('../img/Abstract\ Design.png'), url('../img/Abstract\ Design.png');
+
+    /* background-size: 100px 80px, 100px 80px; */
+    background-repeat: no-repeat, no-repeat;
+    /* background-attachment: fixed, fixed;  */
+    background-position: left center, right center;
+
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 14px;
 }
 
 
 .join-notification img {
-    width: 20px;
+    height: 40px;
 }
 
 
@@ -62,14 +101,60 @@ nav {
     justify-content: space-between;
     justify-items: center;
     align-items: center;
+    height: 100px;
 }
 
 nav img {
-    width: 20px;
+    height: 40px;
 }
 
-.contact-Btn {
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.FeatureList {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em;
+}
+
+.blogEntries {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em;
+}
+
+.pricing-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gender-select{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button, .contact-Btn, .calcCaloriesBtn {
     background-color: var(--primary-color-green-shade-70);
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 10px;
 }
 
 
@@ -134,14 +219,14 @@ main {
     text-align: center;
 }
 
-.calcCaloriesBtn{
+.calcCaloriesBtn {
     background-color: var(--primary-color-green-shade-70);
     border-radius: 3px;
-    color:black;
+    color: black;
 }
 
 
-.choose-plan-btn{
+.choose-plan-btn {
     background-color: var(--primary-color-green-shade-70);
-    color:black;
+    color: black;
 }
