@@ -1,0 +1,147 @@
+:root {
+    --primary-color-green-shade-70: #cbea7b;
+    --primary-color-green-shade-85: #e5f5bd;
+    --primary-color-green-shade-95: #f6fbf9;
+    --primary-color-green-shade-99: #fafdf2;
+
+    --primary-color-darkgreen-shade-15: #1a3129;
+    --primary-color-darkgreen-shade-20: #234338;
+    --primary-color-darkgreen-shade-30: #346454;
+
+    --grey-shade-30: #4c4c4d;
+    --grey-shade-60: #98989a;
+
+    --white: #ffffff;
+}
+
+
+body {
+    font-family: "Urbanist", sans-serif;
+    text-align: left;
+    font-optical-sizing: auto;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: normal;
+    color: black;
+}
+
+header {
+    background-color: var(--primary-color-darkgreen-shade-15);
+    color:var(--white);
+}
+
+footer{
+    background-color: var(--primary-color-darkgreen-shade-15);
+    color:var(--white);
+}
+
+.footer-links{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.join-notification {
+    border-radius: 5px;
+    background-color: var(--primary-color-darkgreen-shade-30);
+    background-image: url('../img/Abstract\ Design.png');
+}
+
+
+.join-notification img {
+    width: 20px;
+}
+
+
+/* .join-notification p {
+    font-size: 18px;
+    font-weight: 600;
+  } */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+}
+
+nav img {
+    width: 20px;
+}
+
+.contact-Btn {
+    background-color: var(--primary-color-green-shade-70);
+}
+
+
+h1 {
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 69.6px;
+}
+
+h2 {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 51px;
+}
+
+h3 {
+
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+}
+
+.left-image {
+    border-radius: 15px 0px 0px 0px;
+    box-shadow: 10px 5px 5px var(--primary-color-green-shade-70);
+    width: 50vw;
+}
+
+.right-text p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+}
+
+.starter-Btn {
+    color: black;
+    background-color: var(--primary-color-green-shade-70);
+}
+
+.demo-Outline-Btn {
+    color: black;
+    background-color: var(--primary-color-green-shade-85);
+    border: 2px solid var(--primary-color-green-shade-70);
+}
+
+.customer-icons-container {
+    display: flex;
+    justify-content: start;
+    color: black;
+}
+
+.customer-icons {
+    display: flex;
+    justify-content: start;
+}
+
+.customer-icons img {
+    width: 20px;
+}
+
+main {
+    text-align: center;
+}
+
+.calcCaloriesBtn{
+    background-color: var(--primary-color-green-shade-70);
+    border-radius: 3px;
+    color:black;
+}
+
+
+.choose-plan-btn{
+    background-color: var(--primary-color-green-shade-70);
+    color:black;
+}
