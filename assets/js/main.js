@@ -34,7 +34,7 @@ function calcMetabolicRate(e) {
     document.querySelector("#tdee").innerHTML = tdee.toFixed(2);
     document.querySelector("#tdee-kj").innerHTML = tdee_kj.toFixed(2);
 
-    document.querySelector("#mbrTable").style.display = "block";
+    document.querySelector("#mbrTable").style.visibility = "visible";
 }
 
 function change_pricing_period(period = "Yearly") {
@@ -45,11 +45,25 @@ function change_pricing_period(period = "Yearly") {
         document.querySelector(".price-plan-2 h2").innerHTML = "$474";
         document.querySelector(".price-plan-3 h2").innerHTML = "$594";
         document.querySelectorAll(".contract-period").forEach(e => { e.innerHTML = "/year" });
+
+
+        document.getElementById("priceBtnYear").classList.add("active");
+        document.getElementById("priceBtnMonth").classList.remove("active");
+        
+
     } else {
         console.log("Monat ausgewählt");
         document.querySelector(".price-plan-1 h2").innerHTML = "$49";
         document.querySelector(".price-plan-2 h2").innerHTML = "$79";
         document.querySelector(".price-plan-3 h2").innerHTML = "$99";
         document.querySelectorAll(".contract-period").forEach(e => { e.innerHTML = "/month" });
+
+        document.getElementById("priceBtnYear").classList.remove("active");
+        document.getElementById("priceBtnMonth").classList.add("active");
     }
 }
+
+document.querySelector("#top").addEventListener("click", e=>{
+    // scroll(0,0);
+    window.scrollTo({top: 0, behavior: 'smooth'});
+});
