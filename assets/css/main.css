@@ -39,7 +39,7 @@ ul {
     padding: 0;
 }
 
-.footer-links  li {
+.footer-links li {
     border-radius: 6px;
     border: 2px solid var(--primary-color-darkgreen-shade-30);
     padding: 15px;
@@ -104,6 +104,10 @@ a:active {
     margin-right: 8%;
 }
 
+.width50vw {
+    width: 60vw;
+}
+
 .join-notification {
     height: 48px;
     border-radius: 10px;
@@ -152,7 +156,7 @@ nav img {
 .hero {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     color: black;
     gap: 20px;
 }
@@ -210,6 +214,7 @@ nav img {
     border: 2px solid var(--primary-color-green-shade-85);
     border-radius: 10px;
     text-align: left;
+    padding: 20px;
 }
 
 .blogEntry p,
@@ -297,7 +302,7 @@ nav img {
 }
 
 label {
-    width:100%;
+    width: 100%;
 }
 
 .formFlex {
@@ -600,4 +605,56 @@ main {
 
 .bottom-space {
     margin-bottom: 60px;
+}
+
+.left-image img {
+    width: 100%;
+}
+
+.mobile {
+    visibility: collapse;
+    display: none;
+}
+
+@media only screen and (max-width: 880px) {
+    /* body {
+      background-color: lightblue;
+    } */
+
+.containerize {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+    .mobile {
+        visibility: visible;
+        display: inline-block;
+        width:30px;
+        height: 30px;
+        right:0px;
+
+    }
+
+    .join-notification {
+        background-image: none !important;
+
+    }
+
+    .nonMobile {
+        display: none;
+    }
+
+    .hero,
+    .pricing-section,
+    .footer-links,
+    .footer-links ul {
+        flex-direction: column;
+    }
+
+    .FeatureList,
+    .blogEntries,
+    .formGrid {
+        grid-template-columns: 1fr;
+    }
+
 }
