@@ -22,7 +22,7 @@ function calcMetabolicRate(e) {
         mbr = 655.1 + (9.6 * weight) + (1.8 * size) - (4.7 * age);
     }
 
-
+    // Umrechnung kcal zu kjoule mit 4.184 Multiplikator
     let mbr_kj = mbr * 4.184
 
     let tdee = mbr * activity;
@@ -67,3 +67,7 @@ document.querySelector("#top").addEventListener("click", e=>{
     // scroll(0,0);
     window.scrollTo({top: 0, behavior: 'smooth'});
 });
+
+
+
+document.querySelector("#mbrTable").style.visibility = "collapse";
